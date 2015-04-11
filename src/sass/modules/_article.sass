@@ -1,0 +1,164 @@
+.post
+  margin-top: 70px
+  hr
+    width: 40%
+    margin: 20px auto
+
+  &_title
+    display: block
+    font-weight: normal
+    letter-spacing: 0.1em
+    margin-bottom: 10px
+    font-family: "Bubbler One"
+    color: $color-text
+    text-decoration: none
+    +fontsize(32)
+    &:hover
+      background: lighten($red, 20%)
+    h2
+      display: inline
+      padding-right: 5px
+      background: #fff
+
+  &_body
+    color: lighten($color-text, 30%)
+    line-height: 1.5
+    p
+      margin-bottom: 0.75em
+
+
+  &_meta
+    margin-top: 5px
+    +fontsize(14)
+    +clearfix
+    li
+      float: left
+      margin-right: 10px
+    a
+      text-decoration: none
+      font-weight: bold
+      color: lighten($color-text, 50%)
+      &:hover
+        font-style: italic
+        color: lighten($color-text, 30%)
+    .like_button
+      display: inline-block
+      vertical-align: middle
+
+  &_img
+    position: relative
+    left: -20px
+    margin-bottom: 20px
+    img
+      border: 7px solid #fff
+      box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2)
+    &:before
+      position: absolute
+      display: block
+      content: ""
+      top: 4px
+      left: -31px
+      width: 54px
+      height: 37px
+      background: url('../img/clip.png') no-repeat
+
+  &_caption
+    color: lighten($color-text, 30%)
+    line-height: 1.2
+    font-family: serif
+    font-style: italic
+    +fontsize(14)
+
+  &_quote
+    color: lighten($color-text, 30%)
+    vertical-align: text-top
+    font-style: italic
+    font-family: serif
+    line-height: 1.5
+    +fontsize(18)
+    &:before
+      float: left
+      color: lighten($color-text, 70%)
+      margin-right: 20px
+      content: "\f10d"
+      font-family: 'FontAwesome'
+      line-height: 1
+      +fontsize(48)
+
+  &_source
+    display: block
+    padding: 5px 20px
+    text-align: right
+    color: lighten($color-text, 40%)
+    font-style: italic
+    font-family: serif
+    &:before
+      content: "── "
+
+  &_link
+    display: block
+    margin: 0 -40px 10px
+    padding: 40px 40px 40px
+    text-align: center
+    background: #444
+    color: #444
+    text-decoration: none
+    &:hover
+      color: $green
+      background: $green
+    i
+      display: block
+      margin: 0 auto 30px
+      line-height: 100px
+      +circle(100px, #fff)
+      +fontsize(50)
+    &_title
+      font-weight: bold
+      color: #fff
+      +fontsize(20)
+    &_desc
+      color: #fff
+      text-align: left
+      margin-top: 20px
+      padding: 0 30px
+      +fontsize(14)
+
+  &_chat
+    &_title
+      line-height: 50px
+      font-weight: normal
+      +fontsize(26)
+      +clearfix
+      &:before
+        float: left
+        display: block
+        margin-right: 10px
+        content: "\f086"
+        font-family: 'FontAwesome'
+        color: #fff
+        text-align: center
+        +circle(50px, $red)
+        +fontsize(32)
+    ul
+      margin-top: 10px
+      margin-left: 60px
+      line-height: 1.5
+    li
+      font-style: italic
+      color: lighten($color-text, 30%)
+      margin-bottom: 0.5em
+    strong
+      font-style: normal
+      color: lighten($color-text, 20%)
+      padding-right: 0.5em
+
+  .like_button
+    margin-top: 10px
+    iframe
+      display: inline-block
+    &:after
+      content: '── Do you like it?'
+      color: lighten($color-text, 50%)
+      margin: 0 0.5em
+      vertical-align: text-top
+      +fontsize(14)

@@ -1,0 +1,34 @@
+.widget
+  margin: 30px
+  &_title
+    font-family: "Amatic SC"
+    +fontsize(42)
+
+.photoList
+
+.photo
+  width: 25%
+  padding: 5px
+  display: inline-block
+  &_img
+    width: 100%
+    height: 100px
+    background: #aaa
+
+.linkList
+  +clearfix
+
+.link
+  float: left
+  width: 50%
+  padding: 10px
+  &_img
+    background: #fff
+    width: 100%
+    height: 50px
+  &_title
+    padding: 3px 5px
+  &_desc
+    padding: 0 5px
+    color: lighten($color-text, 30%)
+    +fontsize(14)

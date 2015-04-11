@@ -1,0 +1,68 @@
+@import "reset"
+@import "mixin"
+@import "settings"
+@import "modules/site"
+@import "modules/article"
+@import "modules/author"
+@import "modules/menu"
+@import "modules/widget"
+@import "modules/pagenation"
+
+@import url("http://fonts.googleapis.com/css?family=Bubbler+One")
+@import url("http://fonts.googleapis.com/css?family=Amatic+SC:400,700")
+
+body
+  color: $color-text
+  background: $light-gray
+
+#layout
+  &_header
+    position: relative
+    height: 250px
+    background: url("../img/cover.jpg") fixed
+    border-bottom: 5px solid #fff
+    a
+      position: absolute
+      bottom: 10px
+      right: 10px
+      color: #fff
+      text-decoration: none
+      text-shadow: 0px 0px 1px #000
+      +fontsize(14)
+      &:hover
+        color: lighten($green, 20%)
+      &:before
+        content: "\f030"
+        font-family: 'FontAwesome'
+        margin-right: 0.5em
+        text-decoration: none
+
+  &_container
+    position: relative
+    width: 95%
+    max-width: 1300px
+    margin: 0 auto
+    +clearfix
+
+  &_content
+    float: left
+    width: 55%
+    padding: 50px 40px
+    background: #fff
+    margin-top: $inset-top * -1
+    margin-bottom: $inset-bottom * -1
+    border-top: 10px solid $canada
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1)
+
+  &_sidebar
+    float: left
+    width: 45%
+
+  &_footer
+    padding-top: $inset-bottom + 10
+    text-align: center
+    height: 100px
+    color: #fff
+    background: darken($canada, 20%)
+    line-height: 1.5
+    +fontsize(12)

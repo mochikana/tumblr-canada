@@ -1,0 +1,69 @@
+%sns-link
+  display: inline-block
+  width: 40px
+  height: 40px
+  line-height: 40px
+  color: $light-gray
+  text-align: center
+  text-decoration: none
+  background: lighten($color-text, 10%)
+  border-radius: 5px
+  +fontsize(32)
+  &:before
+    font-family: 'FontAwesome'
+
+.author
+  width: 80%
+  margin: 50px auto
+  &_info
+    +clearfix
+  &_img
+    float: left
+    display: block
+    width: 100px
+    height: 100px
+    margin-right: 10px
+    border-radius: 50%
+    border: 3px solid #fff
+    background: #ddd
+  &_name
+    margin: 5px 0 7px
+    font-weight: bold
+  &_desc
+    color: lighten($color-text, 30%)
+    +fontsize(14)
+  &_sns
+    margin-top: 20px
+    +clearfix
+    li
+      float: left
+      margin-right: 10px
+
+  a.twitter
+    @extend %sns-link
+    &:before
+      content: "\f099"
+    &:hover
+      background: $color-sns-twitter
+
+  a.facebook
+    @extend %sns-link
+    &:before
+      content: "\f09a"
+    &:hover
+      background: $color-sns-facebook
+
+  a.github
+    @extend %sns-link
+    &:before
+      content: "\f113"
+    &:hover
+      background: lighten($color-text, 40%)
+
+  a.google
+    @extend %sns-link
+    &:before
+      content: "\f0d5"
+    &:hover
+      background: $color-sns-google
+
